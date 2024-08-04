@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Toast Calendar -->
+  <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
+
+</head>
+
+<body>
+  <!-- start navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fa-solid fa-calendar-days"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Agenda</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ventas
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Ventas Facturadas</a></li>
+              <li><a class="dropdown-item" href="#">Abonos</a></li>
+              <li><a class="dropdown-item" href="#">Planes</a></li>
+              <li><a class="dropdown-item" href="#">Reporte de Comisiones</a></li>
+              <li><a class="dropdown-item" href="#">Gift Cards</a></li>
+              <li><a class="dropdown-item" href="#">Caja de Ventas</a></li>
+              <li><a class="dropdown-item" href="#">Pagos y Transferencias</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Etc</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Recordatorios</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Clientes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Base de Clientes</a></li>
+              <li><a class="dropdown-item" href="#">Reporte de Encuestas</a></li>
+              <li><a class="dropdown-item" href="#">Email Marketing</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Productos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Inventario</a></li>
+              <li><a class="dropdown-item" href="#">Venta de Productos</a></li>
+              <li><a class="dropdown-item" href="#">Movimiento de Stock</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Reportes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Resumen</a></li>
+              <li><a class="dropdown-item" href="#">Reporte de reservas</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Administración
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Locales</a></li>
+              <li><a class="dropdown-item" href="#">Profesionales</a></li>
+              <li><a class="dropdown-item" href="#">Servicios</a></li>
+              <li><a class="dropdown-item" href="#">Comisiones</a></li>
+              <li><a class="dropdown-item" href="#">Planes</a></li>
+              <li><a class="dropdown-item" href="#">Recursos</a></li>
+              <li><a class="dropdown-item" href="#">Encuestas</a></li>
+              <li><a class="dropdown-item" href="#">Consentimientos</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <button class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button class="btn btn-dark"><i class="fa-solid fa-globe"></i></button>
+          <button class="btn btn-dark"><i class="fa-solid fa-gear"></i></button>
+          <button class="btn btn-dark"><i class="fa-solid fa-user"></i></button>
+          <!-- <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"> -->
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Sucursal</label>
+          <select id="exampleFormControlInput1" class="form-select" aria-label="Default select example" disabled>
+            <option selected>OPATRA MEXICO</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Profesional</label>
+          <select id="exampleFormControlInput1" class="form-select" aria-label="Default select example">
+            <option selected>Todos</option>
+            <option value="1">MITIKAH 1</option>
+            <option value="2">OPATRA CABINA 1</option>
+            <option value="3">OPATRA CABINA 2</option>
+          </select>
+        </div>
+        <div class="mb-5">
+          <label for="exampleFormControlInput1" class="form-label">Estado de la reserva</label>
+          <select id="exampleFormControlInput1" class="form-select" aria-label="Default select example">
+            <option selected>Reservas activas</option>
+            <option value="1">Reservas canceladas</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-secondary-subtle" id="basic-addon1"><i
+                class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" class="form-control" placeholder="Busqueda rápida de hora" aria-label="Username"
+              aria-describedby="basic-addon1" disabled>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Calendario 1</div>
+            <div class="card-body">
+              <h5 class="card-title">Aqui va calendario</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Calendario 2</div>
+            <div class="card-body">
+              <h5 class="card-title">Aqui va calendario</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-10">
+        <div id="calendar" style="height: 800px"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- Toast Calendar -->
+  <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>
+  <script>
+    const Calendar = tui.Calendar;
+    const calendar = new Calendar('#calendar', {
+      defaultView: 'week',
+      template: {
+        time(event) {
+          const { start, end, title } = event;
+
+          return `<span style="color: white;">${formatTime(start)}~${formatTime(end)} ${title}</span>`;
+        },
+        allday(event) {
+          return `<span style="color: gray;">${event.title}</span>`;
+        },
+      },
+      calendars: [
+        {
+          id: 'cal1',
+          name: 'Personal',
+          backgroundColor: '#03bd9e',
+        },
+        {
+          id: 'cal2',
+          name: 'Work',
+          backgroundColor: '#00a9ff',
+        },
+      ],
+    });
+  </script>
+</body>
+
+</html>
