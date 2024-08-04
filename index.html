@@ -14,7 +14,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Toast Calendar -->
   <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
-
 </head>
 
 <body>
@@ -30,11 +29,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Agenda</a>
           </li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Ventas
@@ -53,11 +50,9 @@
               <li><a class="dropdown-item" href="#">Etc</a></li>
             </ul>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="#">Recordatorios</a>
           </li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Clientes
@@ -68,7 +63,6 @@
               <li><a class="dropdown-item" href="#">Email Marketing</a></li>
             </ul>
           </li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Productos
@@ -79,7 +73,6 @@
               <li><a class="dropdown-item" href="#">Movimiento de Stock</a></li>
             </ul>
           </li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Reportes
@@ -89,7 +82,6 @@
               <li><a class="dropdown-item" href="#">Reporte de reservas</a></li>
             </ul>
           </li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Administración
@@ -105,7 +97,6 @@
               <li><a class="dropdown-item" href="#">Consentimientos</a></li>
             </ul>
           </li>
-
         </ul>
         <form class="d-flex" role="search">
           <button class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -120,6 +111,7 @@
   <!-- end navbar -->
   <div class="container-fluid">
     <div class="row">
+      <!-- sidebar -->
       <div class="col-2 shadow p-3 mb-5 bg-body-tertiary rounded">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Sucursal</label>
@@ -172,47 +164,20 @@
           </div>
         </div>
       </div>
+      <!-- main container -->
       <div class="col-10">
         <div id="calendar" style="height: 800px"></div>
       </div>
     </div>
   </div>
-
-
   <!-- Bootstrap 5 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <!-- Toast Calendar -->
   <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>
-  <script>
-    const Calendar = tui.Calendar;
-    const calendar = new Calendar('#calendar', {
-      defaultView: 'week',
-      template: {
-        time(event) {
-          const { start, end, title } = event;
-
-          return `<span style="color: white;">${formatTime(start)}~${formatTime(end)} ${title}</span>`;
-        },
-        allday(event) {
-          return `<span style="color: gray;">${event.title}</span>`;
-        },
-      },
-      calendars: [
-        {
-          id: 'cal1',
-          name: 'Personal',
-          backgroundColor: '#03bd9e',
-        },
-        {
-          id: 'cal2',
-          name: 'Work',
-          backgroundColor: '#00a9ff',
-        },
-      ],
-    });
-  </script>
+  <!-- main script -->
+  <script src="main.js"></script>
 </body>
 
 </html>
